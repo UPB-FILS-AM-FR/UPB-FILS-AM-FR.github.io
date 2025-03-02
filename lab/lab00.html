@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Laboratory 0: Introductory Applications | Microprocessor Architecture</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://upb-fils-am-fr.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://upb-fils-am-fr.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://upb-fils-am-fr.github.io/lab/lab00"><meta data-rh="true" property="og:locale" content="en_GB"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-lab-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-lab-current"><meta data-rh="true" property="og:title" content="Laboratory 0: Introductory Applications | Microprocessor Architecture"><meta data-rh="true" name="description" content="Useful chapters from ATmega324P Datasheet"><meta data-rh="true" property="og:description" content="Useful chapters from ATmega324P Datasheet"><link data-rh="true" rel="icon" href="/img/sigla_am.ico"><link data-rh="true" rel="canonical" href="https://upb-fils-am-fr.github.io/lab/lab00"><link data-rh="true" rel="alternate" href="https://upb-fils-am-fr.github.io/lab/lab00" hreflang="en-GB"><link data-rh="true" rel="alternate" href="https://upb-fils-am-fr.github.io/fr/lab/lab00" hreflang="fr"><link data-rh="true" rel="alternate" href="https://upb-fils-am-fr.github.io/lab/lab00" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.f442cfaf.css">
-<script src="/assets/js/runtime~main.d21fc30e.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0e6da921.js" defer="defer"></script>
 <script src="/assets/js/main.7d0cd7ca.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -270,11 +270,12 @@ More examples can be found <a href="https://wellys.com/posts/avr_c_macos/" targe
 <ul>
 <li>
 <p>Modify the Hello World example so that the lit LED is red instead of green. Hint: Find the pin and port to which this LED (part of the RGB LED) is connected in the <a href="https://raw.githubusercontent.com/dantudose/PM-Board/main/Hardware/schematic.pdf" target="_blank" rel="noopener noreferrer">board schematic</a> / <a href="https://github.com/dantudose/PM-Board/tree/main?tab=readme-ov-file#board-pinout" target="_blank" rel="noopener noreferrer">board documentation on GitHub</a>.</p>
-<p><strong>Note</strong>: The RGB LED has a common anode, so writing a logical 1 to the corresponding GPIO pin will turn off the LED.
-<strong>Task 2</strong></p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>The RGB LED has a common anode, so writing a logical 1 to the corresponding GPIO pin will turn off the LED.</p></div></div>
 </li>
-<li>
-<p>Modify the Hello World example so that the LED changes color when Button 1 (PB2) is pressed.</p>
+</ul>
+<p><strong>Task 2</strong></p>
+<ul>
+<li>Modify the Hello World example so that the LED changes color when Button 1 (PB2) is pressed.<!-- -->
 <ul>
 <li>Keep the green LED on by default.</li>
 <li>Configure the registers to set PB2 as an input.</li>
