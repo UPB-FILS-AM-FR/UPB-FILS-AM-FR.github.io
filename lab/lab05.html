@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Lab 5: SPI (Serial Peripheral Interface) | Microprocessor Architecture</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://upb-fils-am-fr.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://upb-fils-am-fr.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://upb-fils-am-fr.github.io/lab/lab05"><meta data-rh="true" property="og:locale" content="en_GB"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-lab-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-lab-current"><meta data-rh="true" property="og:title" content="Lab 5: SPI (Serial Peripheral Interface) | Microprocessor Architecture"><meta data-rh="true" name="description" content="1. Introduction"><meta data-rh="true" property="og:description" content="1. Introduction"><link data-rh="true" rel="icon" href="/img/sigla_am.ico"><link data-rh="true" rel="canonical" href="https://upb-fils-am-fr.github.io/lab/lab05"><link data-rh="true" rel="alternate" href="https://upb-fils-am-fr.github.io/lab/lab05" hreflang="en-GB"><link data-rh="true" rel="alternate" href="https://upb-fils-am-fr.github.io/fr/lab/lab05" hreflang="fr"><link data-rh="true" rel="alternate" href="https://upb-fils-am-fr.github.io/lab/lab05" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.f442cfaf.css">
-<script src="/assets/js/runtime~main.6d121175.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.789feb14.js" defer="defer"></script>
 <script src="/assets/js/main.b9382a7a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -94,7 +94,7 @@ Only one <strong>Slave</strong> can be selected at a time by the <strong>Master<
 <a href="https://ocw.cs.pub.ro/courses/_media/pm/lab/lab5_skel.zip" target="_blank" rel="noopener noreferrer">lab5_skel.zip</a></p>
 <p>In this lab, you won’t be writing a lot of code, but it’s important to understand how your code interacts with the skeleton and the behavior of the library functions you’ll use.</p>
 <hr>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="task-1-spi-control">Task 1: SPI Control<a href="#task-1-spi-control" class="hash-link" aria-label="Direct link to Task 1: SPI Control" title="Direct link to Task 1: SPI Control">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="task-1-spi-control-2p">Task 1: SPI Control (2p)<a href="#task-1-spi-control-2p" class="hash-link" aria-label="Direct link to Task 1: SPI Control (2p)" title="Direct link to Task 1: SPI Control (2p)">​</a></h3>
 <p>Implement the basic SPI communication functions in <code>spi.c</code>:</p>
 <ul>
 <li><code>SPI_init()</code></li>
@@ -109,7 +109,7 @@ Only one <strong>Slave</strong> can be selected at a time by the <strong>Master<
 <li>Use <code>SPDR0</code> to send data and receive the response in one function (full-duplex), replacing the need for <code>SPI_read()</code> and <code>SPI_write()</code>.</li>
 </ul></div></div>
 <hr>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="task-2-sd-card-control">Task 2: SD Card Control<a href="#task-2-sd-card-control" class="hash-link" aria-label="Direct link to Task 2: SD Card Control" title="Direct link to Task 2: SD Card Control">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="task-2-sd-card-control--2p">Task 2: SD Card Control  (2p)<a href="#task-2-sd-card-control--2p" class="hash-link" aria-label="Direct link to Task 2: SD Card Control  (2p)" title="Direct link to Task 2: SD Card Control  (2p)">​</a></h3>
 <p>In <code>sd.c</code>, implement:</p>
 <ul>
 <li><code>SD_init()</code></li>
@@ -123,36 +123,62 @@ Only one <strong>Slave</strong> can be selected at a time by the <strong>Master<
 <li>✅ <strong>Checkpoint:</strong> After flashing your code, the LCD should change from <code>Mounting...</code> to <code>Mounted!</code>. If not, hit the <strong>RESET</strong> button and debug if needed.</li>
 </ul></div></div>
 <hr>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="task-3-first-file-display">Task 3: First File Display<a href="#task-3-first-file-display" class="hash-link" aria-label="Direct link to Task 3: First File Display" title="Direct link to Task 3: First File Display">​</a></h3>
-<p>Implement <code>init_directory()</code> in <code>lab5.c</code> to show the first <code>.wav</code> file from the <code>/music</code> directory:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="checkpoint-1p">CHECKPOINT (1p)<a href="#checkpoint-1p" class="hash-link" aria-label="Direct link to CHECKPOINT (1p)" title="Direct link to CHECKPOINT (1p)">​</a></h3>
+<blockquote>
+<p>After a few seconds, the LCD should display: <strong>&quot;Mounted!&quot;</strong></p>
+</blockquote>
+<p>This confirms that the SD card has been successfully initialized and mounted.</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="task-3--reading-temperature-2p">Task 3 – Reading Temperature (2p)<a href="#task-3--reading-temperature-2p" class="hash-link" aria-label="Direct link to Task 3 – Reading Temperature (2p)" title="Direct link to Task 3 – Reading Temperature (2p)">​</a></h3>
+<p>Set up the ADC and read temperature from an analog sensor (e.g., LM35).</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="implementation-steps">Implementation steps:<a href="#implementation-steps" class="hash-link" aria-label="Direct link to Implementation steps:" title="Direct link to Implementation steps:">​</a></h4>
 <ul>
-<li>Use <code>pf_opendir()</code> to open the directory.</li>
-<li>Use <code>pf_readdir()</code> to iterate through entries.</li>
-<li>Skip files starting with an underscore <code>_</code>.</li>
-<li>Use <code>LCD_clear_top_line()</code> and <code>LCD_printAt()</code> to display the file name.</li>
+<li>Create and implement <code>adc_init()</code> and <code>adc_read()</code></li>
+<li>Configure:<!-- -->
+<ul>
+<li>Reference Voltage: <strong>AVcc</strong></li>
+<li>ADC Prescaler: <strong>8</strong></li>
+</ul>
+</li>
+<li>Convert ADC value to voltage, then to °C (e.g., <code>temp = voltage * 100</code>)</li>
+<li>Display the temperature on the <strong>LCD</strong></li>
+<li>Also send the temperature reading via <strong>USART</strong> (serial)</li>
 </ul>
 <hr>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="task-4-file-cycling">Task 4: File Cycling<a href="#task-4-file-cycling" class="hash-link" aria-label="Direct link to Task 4: File Cycling" title="Direct link to Task 4: File Cycling">​</a></h3>
-<p>In <code>lab5.c</code>, handle button <strong>PB2</strong>:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="task-4--logging-temperature-to-sd-card-2p">Task 4 – Logging Temperature to SD Card (2p)<a href="#task-4--logging-temperature-to-sd-card-2p" class="hash-link" aria-label="Direct link to Task 4 – Logging Temperature to SD Card (2p)" title="Direct link to Task 4 – Logging Temperature to SD Card (2p)">​</a></h3>
+<p>Implement <code>log_temperature()</code> in <code>lab5.c</code> to save temperature readings to a <strong>CSV file</strong>.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="requirements">Requirements:<a href="#requirements" class="hash-link" aria-label="Direct link to Requirements:" title="Direct link to Requirements:">​</a></h4>
 <ul>
-<li>On press, show the <strong>next valid file</strong> from <code>/music</code> (skip names starting with <code>_</code>).</li>
-<li>If at the last file, wrap around to the <strong>first</strong> file.</li>
-<li><code>pf_readdir()</code> returns a file with name <code>&quot;&quot;</code> (empty string) at the end of the directory.</li>
-<li>Add a <strong>delay (200–300ms)</strong> to avoid multiple file changes on a single button press.</li>
+<li>Use <code>SD_log_data()</code> to write data to the file</li>
+<li>Show current temperature on the <strong>LCD</strong></li>
+<li>Send current temperature via <strong>USART</strong></li>
+<li>When button <strong>PD6</strong> is pressed, append a new log entry to the file</li>
 </ul>
 <hr>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="task-5-play-music-">Task 5: Play Music 🎵<a href="#task-5-play-music-" class="hash-link" aria-label="Direct link to Task 5: Play Music 🎵" title="Direct link to Task 5: Play Music 🎵">​</a></h3>
-<p>When <strong>PD6</strong> is pressed, call <code>play()</code> to play the currently displayed file:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="task-5--navigating-log-entries-2p">Task 5 – Navigating Log Entries (2p)<a href="#task-5--navigating-log-entries-2p" class="hash-link" aria-label="Direct link to Task 5 – Navigating Log Entries (2p)" title="Direct link to Task 5 – Navigating Log Entries (2p)">​</a></h3>
+<p>Implement <code>init_log_display()</code> and <code>next_log_entry()</code> to read the file <code>log.csv</code> <strong>line by line</strong>.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="features">Features:<a href="#features" class="hash-link" aria-label="Direct link to Features:" title="Direct link to Features:">​</a></h4>
 <ul>
-<li>Implement the behavior in the <code>TODO5</code> section of <code>lab5.c</code>.</li>
-<li>Playback can be <strong>interrupted</strong> by pressing <strong>PD6 + PB2</strong> together — this is already handled in the skeleton.</li>
+<li>Display each CSV line (entry) on the <strong>LCD</strong></li>
+<li>On <strong>PB2</strong> button press, move to the <strong>next line</strong></li>
+<li>When reaching the <strong>end</strong>, loop back to the <strong>start</strong></li>
 </ul>
 <hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="checkpoint-1p-1">CHECKPOINT (1p)<a href="#checkpoint-1p-1" class="hash-link" aria-label="Direct link to CHECKPOINT (1p)" title="Direct link to CHECKPOINT (1p)">​</a></h3>
+<blockquote>
+<p>You must be able to scroll through all temperature logs using the button.</p>
+</blockquote>
+<p>Once complete, your logger should support:</p>
+<ul>
+<li>Real-time sensor readings</li>
+<li>Data logging on button press</li>
+<li>Full log navigation via the LCD and button</li>
+</ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-useful-links">🔗 Useful Links<a href="#-useful-links" class="hash-link" aria-label="Direct link to 🔗 Useful Links" title="Direct link to 🔗 Useful Links">​</a></h2>
 <ul>
 <li>📘 <a href="https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42743-ATmega324P_Datasheet.pdf" target="_blank" rel="noopener noreferrer">ATmega324P Datasheet</a></li>
 <li>💾 <a href="https://codeandlife.com/2012/04/25/simple-fat-and-sd-tutorial-part-3/" target="_blank" rel="noopener noreferrer">FAT SD Card Tutorial</a></li>
 <li>🔄 <a href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all" target="_blank" rel="noopener noreferrer">SPI Protocol Guide</a></li>
-</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/lab/lab04"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Lab 4: Analog to Digital Converter (ADC)</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/lab/lab06"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Lab 6: I2C (Inter-Integrated Circuit)</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-introduction" class="table-of-contents__link toc-highlight">1. Introduction</a></li><li><a href="#2-spi-protocol-serial-peripheral-interface" class="table-of-contents__link toc-highlight">2. SPI Protocol (Serial Peripheral Interface)</a><ul><li><a href="#21-connecting-multiple-slaves" class="table-of-contents__link toc-highlight">2.1 Connecting Multiple Slaves</a></li></ul></li><li><a href="#3-data-transmission-in-spi" class="table-of-contents__link toc-highlight">3. Data Transmission in SPI</a></li><li><a href="#4-spi-on-atmega324" class="table-of-contents__link toc-highlight">4. SPI on ATMega324</a><ul><li><a href="#spi-control-register-spcr" class="table-of-contents__link toc-highlight">SPI Control Register (SPCR)</a></li><li><a href="#spi-status-register-spsr" class="table-of-contents__link toc-highlight">SPI Status Register (SPSR)</a></li><li><a href="#spi-data-register-spdr" class="table-of-contents__link toc-highlight">SPI Data Register (SPDR)</a></li></ul></li><li><a href="#5-fat-sd-card" class="table-of-contents__link toc-highlight">5. FAT SD Card</a><ul><li><a href="#sd-card-format-fat32" class="table-of-contents__link toc-highlight">SD Card Format: FAT32</a></li><li><a href="#petit-fat-filesystem-api" class="table-of-contents__link toc-highlight">Petit FAT Filesystem API</a></li></ul></li><li><a href="#6-exercises" class="table-of-contents__link toc-highlight">6. Exercises</a><ul><li><a href="#task-1-spi-control" class="table-of-contents__link toc-highlight">Task 1: SPI Control</a></li><li><a href="#task-2-sd-card-control" class="table-of-contents__link toc-highlight">Task 2: SD Card Control</a></li><li><a href="#task-3-first-file-display" class="table-of-contents__link toc-highlight">Task 3: First File Display</a></li><li><a href="#task-4-file-cycling" class="table-of-contents__link toc-highlight">Task 4: File Cycling</a></li><li><a href="#task-5-play-music-" class="table-of-contents__link toc-highlight">Task 5: Play Music 🎵</a></li></ul></li><li><a href="#-useful-links" class="table-of-contents__link toc-highlight">🔗 Useful Links</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://ocw.cs.pub.ro/courses/pm" target="_blank" rel="noopener noreferrer" class="footer__link-item">UPB Open CourseWare <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Politehnica Bucharest. <br> This pages are the translated and adapted version from https://ocw.cs.pub.ro/courses/pm</div></div></div></footer></div>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/lab/lab04"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Lab 4: Analog to Digital Converter (ADC)</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/lab/lab06"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Lab 6: I2C (Inter-Integrated Circuit)</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-introduction" class="table-of-contents__link toc-highlight">1. Introduction</a></li><li><a href="#2-spi-protocol-serial-peripheral-interface" class="table-of-contents__link toc-highlight">2. SPI Protocol (Serial Peripheral Interface)</a><ul><li><a href="#21-connecting-multiple-slaves" class="table-of-contents__link toc-highlight">2.1 Connecting Multiple Slaves</a></li></ul></li><li><a href="#3-data-transmission-in-spi" class="table-of-contents__link toc-highlight">3. Data Transmission in SPI</a></li><li><a href="#4-spi-on-atmega324" class="table-of-contents__link toc-highlight">4. SPI on ATMega324</a><ul><li><a href="#spi-control-register-spcr" class="table-of-contents__link toc-highlight">SPI Control Register (SPCR)</a></li><li><a href="#spi-status-register-spsr" class="table-of-contents__link toc-highlight">SPI Status Register (SPSR)</a></li><li><a href="#spi-data-register-spdr" class="table-of-contents__link toc-highlight">SPI Data Register (SPDR)</a></li></ul></li><li><a href="#5-fat-sd-card" class="table-of-contents__link toc-highlight">5. FAT SD Card</a><ul><li><a href="#sd-card-format-fat32" class="table-of-contents__link toc-highlight">SD Card Format: FAT32</a></li><li><a href="#petit-fat-filesystem-api" class="table-of-contents__link toc-highlight">Petit FAT Filesystem API</a></li></ul></li><li><a href="#6-exercises" class="table-of-contents__link toc-highlight">6. Exercises</a><ul><li><a href="#task-1-spi-control-2p" class="table-of-contents__link toc-highlight">Task 1: SPI Control (2p)</a></li><li><a href="#task-2-sd-card-control--2p" class="table-of-contents__link toc-highlight">Task 2: SD Card Control  (2p)</a></li><li><a href="#checkpoint-1p" class="table-of-contents__link toc-highlight">CHECKPOINT (1p)</a></li><li><a href="#task-3--reading-temperature-2p" class="table-of-contents__link toc-highlight">Task 3 – Reading Temperature (2p)</a></li><li><a href="#task-4--logging-temperature-to-sd-card-2p" class="table-of-contents__link toc-highlight">Task 4 – Logging Temperature to SD Card (2p)</a></li><li><a href="#task-5--navigating-log-entries-2p" class="table-of-contents__link toc-highlight">Task 5 – Navigating Log Entries (2p)</a></li><li><a href="#checkpoint-1p-1" class="table-of-contents__link toc-highlight">CHECKPOINT (1p)</a></li></ul></li><li><a href="#-useful-links" class="table-of-contents__link toc-highlight">🔗 Useful Links</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://ocw.cs.pub.ro/courses/pm" target="_blank" rel="noopener noreferrer" class="footer__link-item">UPB Open CourseWare <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Politehnica Bucharest. <br> This pages are the translated and adapted version from https://ocw.cs.pub.ro/courses/pm</div></div></div></footer></div>
 </body>
 </html>
